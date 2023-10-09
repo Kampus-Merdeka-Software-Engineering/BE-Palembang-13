@@ -135,7 +135,7 @@ const jalankanServer = async() => {
             res.json(a)
         });
 
-        app.get('/jawaban-tiga', async(req, res) => {
+        app.get('/jawaban-soal-tiga', async(req, res) => {
             //res.send('Hello World!')
 
             let soal_tiga = await SoalTiga.findAll();
