@@ -88,14 +88,14 @@ const jalankanServer = async() => {
 
             let home_materi = await HomeMateri.findAll();
             res.json(home_materi);
-        })
+        });
 
         app.get('/ourteam', async(req, res) => {
             //res.send('Hello World!')
 
             let ourteam = await Ourteam.findAll();
             res.json(ourteam);
-        })
+        });
         
         app.post('/soal-satu', async(req, res) => {
             let data = req.body;
@@ -110,7 +110,7 @@ const jalankanServer = async() => {
 
             let soal_satu = await SoalSatu.findAll();
             res.json(soal_satu);
-        })
+        });
 
         app.post('/soal-dua', async(req, res) => {
             let data = req.body;
@@ -125,7 +125,7 @@ const jalankanServer = async() => {
 
             let soal_dua = await SoalDua.findAll();
             res.json(soal_dua);
-        })
+        });
 
         app.post('/soal-tiga', async(req, res) => {
             let data = req.body;
@@ -140,7 +140,7 @@ const jalankanServer = async() => {
 
             let soal_tiga = await SoalTiga.findAll();
             res.json(soal_tiga);
-        })
+        });
           
         app.listen(port, () => {
             console.log(`Example app listening on port ${port}`)
