@@ -68,16 +68,16 @@ const SoalDua = sequelize.define('soal_dua', {
     timestamps: false
     });
 
-    const SoalTiga = sequelize.define('soal_tiga', {
-        // Model attributes are defined here
-        jawaban: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    }, {
-        tableName: 'soal_tiga',
-        timestamps: false
-        });
+const SoalTiga = sequelize.define('soal_tiga', {
+    // Model attributes are defined here
+    jawaban: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+}, {
+    tableName: 'soal_tiga',
+    timestamps: false
+    });
 
 const jalankanServer = async() => {
     try{
