@@ -8,16 +8,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
-app.use(
-    cors({
-      origin: "*",
-      methods: ["GET", "PUT", "POST", "PATCH", "DELETE"],
-      allowedHeaders: ["Content-Type", "Authorization", "x-csrf-token"],
-      credentials: true,
-      exposedHeaders: ["*", "Authorization"],
-      maxAge: 600,
-    })
-  );
+app.use(cors());
 app.use(bodyParser.json());
 
 const sequelize = new Sequelize(process.env.MYSQL_URL);
